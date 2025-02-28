@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Dashboard</title>
+    <title>Instagram Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
@@ -12,7 +12,7 @@
             display: flex;
         }
         .sidebar {
-            width: 80px;
+            width: 70px;
             height: 100vh;
             background-color: #fff;
             border-right: 1px solid #dbdbdb;
@@ -44,33 +44,57 @@
         .menu-item:hover {
             color: #0095f6;
         }
-        .dashboard {
-            margin-left: -4px;
+        .profile-container {
+            margin-left: 80px;
             padding: 20px;
-            width: calc(100% - 90px);
+            width: calc(100% - 80px);
         }
-        .dashboard h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .story-section {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 10px 0;
-            margin-left: -10px;
-        }
-        .story {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ddd;
+        .profile-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #555;
-            border: 2px solid #0095f6;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #dbdbdb;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-info h2 {
+            margin: 0;
+        }
+        .profile-stats {
+            display: flex;
+            gap: 15px;
+        }
+        .profile-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .post {
+            width: 100%;
+            height: 150px;
+            background-color: #dbdbdb;
+        }
+        .search-container {
+            margin-left: 80px;
+            padding: 20px;
+            width: calc(100% - 80px);
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -83,19 +107,8 @@
         <a href="/notification" class="menu-item"><i class="fas fa-heart"></i>Notifications</a>
         <a href="/profile" class="menu-item"><i class="fas fa-user"></i>Profile</a>
     </div>
-    <div class="dashboard">
-        <h1>Dashboard</h1>
-        <div class="story-section">
-            <div class="story">User 1</div>
-            <div class="story">User 2</div>
-            <div class="story">User 3</div>
-            <div class="story">User 4</div>
-            <div class="story">User 5</div>
-            <div class="story">User 5</div>
-            <div class="story">User 5</div>
-            <div class="story">User 5</div>
-            <div class="story">User 5</div>
-        </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
     </div>
 </body>
 </html>

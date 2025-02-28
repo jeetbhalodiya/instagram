@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 require "db.php"; // Include database connection
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
